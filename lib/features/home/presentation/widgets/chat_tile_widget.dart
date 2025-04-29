@@ -79,7 +79,7 @@ class ChatTileWidget extends StatelessWidget {
                     children: [
                       Text(
                         chatList[index].messages.last["time"],
-                        style: style.blackRegular10,
+                        style: style.blackRegular12,
                       ),
                       5.kH,
                       Container(
@@ -123,7 +123,7 @@ class ChatTileWidget extends StatelessWidget {
                   text: TextSpan(children: [
                 TextSpan(
                     text: "  Your personal messages are ",
-                    style: style.blackRegular10),
+                    style: style.blackRegular12),
                 TextSpan(
                     text: "end-to-end-encrypted", style: style.primRegular14)
               ])),

@@ -23,6 +23,7 @@ class MessageWidget extends StatelessWidget {
             25.kH,
             ListView.builder(
                 shrinkWrap: true,
+                //  reverse: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: chat.messages.length,
                 itemBuilder: (context, index) {
@@ -30,9 +31,12 @@ class MessageWidget extends StatelessWidget {
                   return message[index]["sendByMe"] == true
                       ? MeChatWidget(
                           msg: message[index]["msg"],
+                          status: message[index]["status"],
+                          time: message[index]["time"],
                         )
                       : HeChatWidget(
                           msg: message[index]["msg"],
+                          time: message[index]["time"],
                         );
                 }),
           ],
@@ -44,9 +48,11 @@ class MessageWidget extends StatelessWidget {
 
 class HeChatWidget extends StatelessWidget {
   final String msg;
+  final String time;
   const HeChatWidget({
     super.key,
     required this.msg,
+    required this.time,
   });
 
   @override
@@ -58,15 +64,35 @@ class HeChatWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 17.0, bottom: 7),
         child: Container(
-          constraints: BoxConstraints(maxWidth: AppSize.screenWidth * 0.65),
+          constraints: BoxConstraints(
+              maxWidth: AppSize.screenWidth * 0.65, minWidth: 125),
           decoration: BoxDecoration(
               color: kWhite, borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 12.0, right: 12, top: 8, bottom: 8),
-            child: Text(
-              msg,
-              style: style.blackMedium16,
+                const EdgeInsets.only(left: 12.0, right: 12, top: 8, bottom: 2),
+            child: IntrinsicWidth(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(
+                      msg,
+                      style: style.blackMedium16,
+                      softWrap: true,
+                      overflow: TextOverflow.visible,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      time,
+                      style: style.blackMedium12,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -77,9 +103,13 @@ class HeChatWidget extends StatelessWidget {
 
 class MeChatWidget extends StatelessWidget {
   final String msg;
+  final String status;
+  final String time;
   const MeChatWidget({
     super.key,
     required this.msg,
+    required this.status,
+    required this.time,
   });
 
   @override
@@ -91,15 +121,59 @@ class MeChatWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(right: 17.0, bottom: 7),
         child: Container(
-          constraints: BoxConstraints(maxWidth: AppSize.screenWidth * 0.65),
+          constraints: BoxConstraints(
+              maxWidth: AppSize.screenWidth * 0.65, minWidth: 125),
           decoration: BoxDecoration(
               color: kChatBoxGreen, borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 12.0, right: 12, top: 8, bottom: 8),
-            child: Text(
-              msg,
-              style: style.blackMedium16,
+                const EdgeInsets.only(left: 12.0, right: 12, top: 8, bottom: 2),
+            child: IntrinsicWidth(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(
+                      msg,
+                      style: style.blackMedium16,
+                      softWrap: true,
+                      overflow: TextOverflow.visible,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          time,
+                          style: style.blackMedium12,
+                        ),
+                        2.kW,
+                        status == "send"
+                            ? const Icon(
+                                Icons.check,
+                                size: 21,
+                              )
+                            : status == "delivered"
+                                ? const Icon(
+                                    Icons.done_all,
+                                    size: 23,
+                                  )
+                                : status == "seen"
+                                    ? const Icon(
+                                        Icons.done_all,
+                                        color: kBlue,
+                                        size: 23,
+                                      )
+                                    : const SizedBox(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

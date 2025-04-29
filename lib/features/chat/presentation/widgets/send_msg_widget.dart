@@ -21,7 +21,7 @@ class SendMsgWidget extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                     hintText: "Message",
-                    suffixIcon:Row(
+                    suffixIcon: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const Icon(

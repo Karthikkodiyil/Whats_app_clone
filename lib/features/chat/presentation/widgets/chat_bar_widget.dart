@@ -3,7 +3,9 @@ import 'package:whatsapp_clone/core/constants/constants.dart';
 import 'package:whatsapp_clone/core/utils/app_color.dart';
 import 'package:whatsapp_clone/core/utils/app_size.dart';
 import 'package:whatsapp_clone/core/utils/app_style.dart';
+import 'package:whatsapp_clone/core/utils/back_button_black.dart';
 import 'package:whatsapp_clone/features/home/domain/enitity/chat_entity.dart';
+import 'package:whatsapp_clone/features/profile/presentation/pages/profile_page.dart';
 
 class ChatBarWidget extends StatelessWidget {
   final ChatEntity chat;
@@ -23,26 +25,31 @@ class ChatBarWidget extends StatelessWidget {
       child: Row(
         children: [
           5.kW,
-          InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: const Icon(
-                Icons.arrow_back,
-                color: kBlack,
-                size: 25,
-              )),
+          const BackButtonBlack(),
           10.kW,
-          CircleAvatar(
-            radius: 25,
-            backgroundImage: chat.dp == ""
-                ? const AssetImage(profile)
-                : NetworkImage(chat.dp),
+          Hero(
+            tag: "profileImgHero",
+            child: CircleAvatar(
+              radius: 25,
+              backgroundImage: chat.dp == ""
+                  ? const AssetImage(profile)
+                  : NetworkImage(chat.dp),
+            ),
           ),
           15.kW,
-          Text(
-            chat.name,
-            style: style.blackBold20,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProfilePage(
+                            user: chat,
+                          )));
+            },
+            child: Text(
+              chat.name,
+              style: style.blackBold20,
+            ),
           ),
           const Spacer(),
           const Icon(
@@ -65,3 +72,5 @@ class ChatBarWidget extends StatelessWidget {
     );
   }
 }
+
+
