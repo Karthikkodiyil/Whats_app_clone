@@ -9,14 +9,15 @@ class ChatEntity {
   String aboutUpdateDate;
   List<Map<String, dynamic>> messages;
 
-  ChatEntity(
-      {this.name = "",
-      this.category = "",
-      this.isGroup = false,
-      this.phno = "",
-      this.dp = "",
-      this.noOfUnreadMsg = "",
-      this.about = "",
-      this.aboutUpdateDate = "",
-      required this.messages});
+  ChatEntity({
+    this.name = "",
+    this.category = "",
+    this.isGroup = false,
+    this.phno = "",
+    this.dp = "",
+    this.noOfUnreadMsg = "",
+    this.about = "",
+    this.aboutUpdateDate = "",
+    required this.messages,
+  });
 }

@@ -32,7 +32,7 @@ class ChatRepoImpl implements ChatRepo {
               "msg": "Yes Am",
               "status": ""
             },
-          ]),
+          ], ),
       ChatModel(
           name: "Alex",
           category: "",

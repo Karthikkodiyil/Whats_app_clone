@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:whatsapp_clone/core/constants/constants.dart';
 import 'package:whatsapp_clone/core/utils/app_color.dart';
 import 'package:whatsapp_clone/core/utils/app_size.dart';
-import 'package:whatsapp_clone/core/utils/app_style.dart';
-import 'package:whatsapp_clone/features/home/presentation/bloc/local/chat/chat_bloc.dart';
-import 'package:whatsapp_clone/features/home/presentation/bloc/local/home_bloc/home_bloc.dart';
-import 'package:whatsapp_clone/features/home/presentation/bloc/local/home_bloc/home_event.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/app_bar_widget.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/bottom_nav_bar_widget.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/chat_tile_widget.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/float_button_widget.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/row_list_widget.dart';
-import 'package:whatsapp_clone/features/home/presentation/widgets/text_field_widget.dart';
+import 'package:whatsapp_clone/features/home/presentation/widgets/chat/chat_tile_widget.dart';
+import 'package:whatsapp_clone/features/home/presentation/widgets/chat/row_list_widget.dart';
+import 'package:whatsapp_clone/features/home/presentation/widgets/chat/text_field_widget.dart';
 
 class HomeChatPage extends StatelessWidget {
   const HomeChatPage({super.key});
@@ -21,7 +13,6 @@ class HomeChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     AppSize().init(context);
     return Scaffold(
-      floatingActionButton: const FloatButtonWidget(),
       backgroundColor: kWhite,
       body: SafeArea(
         child: Stack(
@@ -29,28 +20,18 @@ class HomeChatPage extends StatelessWidget {
             SizedBox(
               height: AppSize.screenHeight,
               width: AppSize.screenWidth,
-              child: const Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 10.0, right: 15, left: 15),
-                    child: AppBarWidget(),
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(
-                                top: 5.0, right: 15, left: 15, bottom: 15),
-                            child: TextFieldWidget(),
-                          ),
-                          RowListWidget(),
-                          ChatTileWidget()
-                        ],
-                      ),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    10.kH,
+                    const Padding(
+                      padding: EdgeInsets.only(right: 15, left: 15, bottom: 15),
+                      child: TextFieldWidget(),
                     ),
-                  )
-                ],
+                    const RowListWidget(),
+                    const ChatTileWidget()
+                  ],
+                ),
               ),
             ),
             Positioned(
@@ -72,9 +53,7 @@ class HomeChatPage extends StatelessWidget {
           ],
         ),
       ),
-   //   bottomNavigationBar:const BottomNavBarWidget(),
+      //   bottomNavigationBar:const BottomNavBarWidget(),
     );
   }
 }
-
-

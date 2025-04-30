@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:whatsapp_clone/core/constants/constants.dart';
 import 'package:whatsapp_clone/core/utils/app_color.dart';
 import 'package:whatsapp_clone/core/utils/app_style.dart';
 import 'package:whatsapp_clone/features/home/presentation/bloc/local/home_bloc/home_bloc.dart';
@@ -41,8 +39,11 @@ class BottomNavBarWidget extends StatelessWidget {
                         color: kPrimary,
                       ),
                     )
-                  : const Icon(
-                      Icons.chat,
+                  : const SizedBox(
+                      height: 45,
+                      child: Icon(
+                        Icons.chat_outlined,
+                      ),
                     ),
               label: "Chats",
             ),
@@ -59,8 +60,11 @@ class BottomNavBarWidget extends StatelessWidget {
                           color: kPrimary,
                         ),
                       )
-                    : const Icon(
-                        Icons.update,
+                    : const SizedBox(
+                        height: 45,
+                        child: Icon(
+                          Icons.update,
+                        ),
                       ),
                 label: "Updates"),
             BottomNavigationBarItem(
@@ -76,8 +80,11 @@ class BottomNavBarWidget extends StatelessWidget {
                           color: kPrimary,
                         ),
                       )
-                    : const Icon(
-                        Icons.person_3,
+                    : const SizedBox(
+                        height: 45,
+                        child: Icon(
+                          Icons.person_3_outlined,
+                        ),
                       ),
                 label: "Community"),
             BottomNavigationBarItem(
@@ -93,8 +100,11 @@ class BottomNavBarWidget extends StatelessWidget {
                           color: kPrimary,
                         ),
                       )
-                    : const Icon(
-                        Icons.call,
+                    : const SizedBox(
+                        height: 45,
+                        child: Icon(
+                          Icons.call_outlined,
+                        ),
                       ),
                 label: "Calls"),
           ]);

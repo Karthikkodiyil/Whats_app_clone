@@ -21,12 +21,15 @@ class AppStyle {
   TextStyle get blackRegular14 => _baseStyle(kBlack, FontWeight.w300, 14);
 
   TextStyle get blackMedium20 => _baseStyle(kBlack, FontWeight.w400, 20);
+  TextStyle get redSemi20 => _baseStyle(kRed, FontWeight.w500, 20);
   TextStyle get blackMedium14 => _baseStyle(kBlack, FontWeight.w400, 14);
   TextStyle get blackSemi14 => _baseStyle(kBlack, FontWeight.w900, 14);
   TextStyle get blackSemi17 => _baseStyle(kBlack, FontWeight.w600, 17);
   TextStyle get blackBold20 => _baseStyle(kBlack, FontWeight.bold, 20);
 
   TextStyle get blackBold27 => _baseStyle(kBlack, FontWeight.bold, 27);
+    TextStyle get blacSemi27 => _baseStyle(kBlack, FontWeight.w500, 27);
+
   TextStyle get blackMedium16 => _baseStyle(kBlack, FontWeight.w400, 16);
 
   TextStyle get greenRegular14 => _baseStyle(kGreen, FontWeight.w300, 14);
@@ -36,4 +39,7 @@ class AppStyle {
   TextStyle get blackMedium12 => _baseStyle(kBlack, FontWeight.w400, 12);
 
   TextStyle get whiteMedium13 => _baseStyle(kWhite, FontWeight.w400, 13);
+
+    TextStyle get whiteMedium16 => _baseStyle(kWhite, FontWeight.w400, 16);
+
 }
