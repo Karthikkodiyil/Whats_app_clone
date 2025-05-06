@@ -77,9 +77,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             18.kH,
-            AboutTileWidget(
-              user: user,
-            ),
+            AboutTileWidget(user: user),
             18.kH,
             const OptionTileWidget(),
             18.kH,
@@ -93,5 +91,3 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
-
-
