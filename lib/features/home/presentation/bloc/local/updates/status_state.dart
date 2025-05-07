@@ -10,5 +10,6 @@ abstract class StatusState extends Equatable {
 }
 
 class LoadStatus extends StatusState {
- const LoadStatus(List<StatusEntity> statusList) : super(statusList: statusList);
+  const LoadStatus(List<StatusEntity> statusList)
+      : super(statusList: statusList);
 }
