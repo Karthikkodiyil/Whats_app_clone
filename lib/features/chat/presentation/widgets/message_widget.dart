@@ -23,7 +23,6 @@ class MessageWidget extends StatelessWidget {
             25.kH,
             ListView.builder(
                 shrinkWrap: true,
-                //  reverse: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: chat.messages.length,
                 itemBuilder: (context, index) {
@@ -134,12 +133,10 @@ class MeChatWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Flexible(
-                    child: Text(
-                      msg,
-                      style: style.blackMedium16,
-                      softWrap: true,
-                      overflow: TextOverflow.visible,
-                    ),
+                    child: Text(msg,
+                        style: style.blackMedium16,
+                        softWrap: true,
+                        overflow: TextOverflow.visible),
                   ),
                   Align(
                     alignment: Alignment.centerRight,
@@ -147,27 +144,15 @@ class MeChatWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          time,
-                          style: style.blackMedium12,
-                        ),
+                        Text(time, style: style.blackMedium12),
                         2.kW,
                         status == "send"
-                            ? const Icon(
-                                Icons.check,
-                                size: 21,
-                              )
+                            ? const Icon(Icons.check, size: 21)
                             : status == "delivered"
-                                ? const Icon(
-                                    Icons.done_all,
-                                    size: 23,
-                                  )
+                                ? const Icon(Icons.done_all, size: 23)
                                 : status == "seen"
-                                    ? const Icon(
-                                        Icons.done_all,
-                                        color: kBlue,
-                                        size: 23,
-                                      )
+                                    ? const Icon(Icons.done_all,
+                                        color: kBlue, size: 23)
                                     : const SizedBox(),
                       ],
                     ),
@@ -198,11 +183,10 @@ class CautionContainerWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10, bottom: 8, top: 8),
         child: Text(
-          textAlign: TextAlign.center,
-          "Messages and calls are end-to-end \n encrypted. Only people in this"
-          "chat can read,\nliste to, or share them. Learn more.",
-          style: style.blackMedium14,
-        ),
+            textAlign: TextAlign.center,
+            "Messages and calls are end-to-end \n encrypted. Only people in this"
+            "chat can read,\nliste to, or share them. Learn more.",
+            style: style.blackMedium14),
       ),
     );
   }

@@ -12,10 +12,6 @@ class BackButtonBlack extends StatelessWidget {
         onTap: () {
           Navigator.pop(context);
         },
-        child: const Icon(
-          Icons.arrow_back,
-          color: kBlack,
-          size: 25,
-        ));
+        child: const Icon(Icons.arrow_back, color: kBlack, size: 25));
   }
 }

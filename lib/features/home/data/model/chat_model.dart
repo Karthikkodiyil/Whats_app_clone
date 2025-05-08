@@ -1,8 +1,6 @@
 import 'package:whatsapp_clone/features/home/domain/enitity/chat_entity.dart';
 
-class ChatModel extends ChatEntity{
-
-
+class ChatModel extends ChatEntity {
   ChatModel(
       {super.name = "",
       super.isGroup = false,
@@ -14,5 +12,3 @@ class ChatModel extends ChatEntity{
       super.aboutUpdateDate = "",
       required super.messages});
 }
-
-

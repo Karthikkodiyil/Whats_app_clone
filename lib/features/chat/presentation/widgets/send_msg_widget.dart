@@ -24,30 +24,18 @@ class SendMsgWidget extends StatelessWidget {
                     suffixIcon: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Icon(
-                          Icons.attach_file,
-                          color: kBlack,
-                          size: 25,
-                        ),
+                        const Icon(Icons.attach_file, color: kBlack, size: 25),
                         10.kW,
-                        const Icon(
-                          Icons.currency_rupee_sharp,
-                          color: kBlack,
-                          size: 25,
-                        ),
+                        const Icon(Icons.currency_rupee_sharp,
+                            color: kBlack, size: 25),
                         10.kW,
-                        const Icon(
-                          Icons.camera_alt_outlined,
-                          color: kBlack,
-                          size: 27,
-                        ),
+                        const Icon(Icons.camera_alt_outlined,
+                            color: kBlack, size: 27),
                         15.kW
                       ],
                     ),
-                    prefixIcon: const Icon(
-                      Icons.sticky_note_2_outlined,
-                      size: 28,
-                    ),
+                    prefixIcon:
+                        const Icon(Icons.sticky_note_2_outlined, size: 28),
                     filled: true,
                     fillColor: kWhite,
                     border: OutlineInputBorder(
@@ -61,11 +49,7 @@ class SendMsgWidget extends StatelessWidget {
               width: 55,
               decoration: BoxDecoration(
                   color: kPrimary, borderRadius: BorderRadius.circular(360)),
-              child: const Icon(
-                Icons.mic,
-                color: kWhite,
-                size: 30,
-              ),
+              child: const Icon(Icons.mic, color: kWhite, size: 30),
             ),
           ],
         ),

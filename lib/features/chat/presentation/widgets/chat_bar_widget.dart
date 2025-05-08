@@ -30,11 +30,10 @@ class ChatBarWidget extends StatelessWidget {
           Hero(
             tag: "profileImgHero",
             child: CircleAvatar(
-              radius: 25,
-              backgroundImage: chat.dp == ""
-                  ? const AssetImage(profile)
-                  : NetworkImage(chat.dp),
-            ),
+                radius: 25,
+                backgroundImage: chat.dp == ""
+                    ? const AssetImage(profile)
+                    : NetworkImage(chat.dp)),
           ),
           15.kW,
           InkWell(
@@ -42,35 +41,19 @@ class ChatBarWidget extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ProfilePage(
-                            user: chat,
-                          )));
+                      builder: (context) => ProfilePage(user: chat)));
             },
-            child: Text(
-              chat.name,
-              style: style.blackBold20,
-            ),
+            child: Text(chat.name, style: style.blackBold20),
           ),
           const Spacer(),
-          const Icon(
-            Icons.video_camera_back_outlined,
-            size: 30,
-          ),
+          const Icon(Icons.video_camera_back_outlined, size: 30),
           23.kW,
-          const Icon(
-            Icons.call_outlined,
-            size: 28,
-          ),
+          const Icon(Icons.call_outlined, size: 28),
           12.kW,
-          const Icon(
-            Icons.more_vert,
-            size: 30,
-          ),
+          const Icon(Icons.more_vert, size: 30),
           10.kW
         ],
       ),
     );
   }
 }
-
-

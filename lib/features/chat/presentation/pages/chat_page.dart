@@ -23,18 +23,12 @@ class ChatPage extends StatelessWidget {
                 image: AssetImage(whatsAppChatBg), fit: BoxFit.fill)),
         child: Column(
           children: [
-            ChatBarWidget(
-              chat: chat,
-            ),
+            ChatBarWidget(chat: chat),
             MessageWidget(chat: chat),
-           const SendMsgWidget()
+            const SendMsgWidget()
           ],
         ),
       )),
     );
   }
 }
-
-
-
-

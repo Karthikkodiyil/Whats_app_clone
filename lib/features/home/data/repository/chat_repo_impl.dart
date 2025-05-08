@@ -7,32 +7,33 @@ class ChatRepoImpl implements ChatRepo {
   List<ChatEntity> getChatList() {
     List<ChatModel> chatList = [
       ChatModel(
-          name: "Finch",
-          category: "",
-          phno: "9994726188",
-          noOfUnreadMsg: "1",
-          about: "✨💼",
-          aboutUpdateDate: "Oct 05 2023",
-          messages: [
-            {
-              "sendByMe": true,
-              "time": "10:25 PM",
-              "msg": "Hello",
-              "status": "seen"
-            },
-            {
-              "sendByMe": true,
-              "time": "10:25 PM",
-              "msg": "Are you comming or not ?",
-              "status": "seen"
-            },
-            {
-              "sendByMe": false,
-              "time": "10:30 PM",
-              "msg": "Yes Am",
-              "status": ""
-            },
-          ], ),
+        name: "Finch",
+        category: "",
+        phno: "9994726188",
+        noOfUnreadMsg: "1",
+        about: "✨💼",
+        aboutUpdateDate: "Oct 05 2023",
+        messages: [
+          {
+            "sendByMe": true,
+            "time": "10:25 PM",
+            "msg": "Hello",
+            "status": "seen"
+          },
+          {
+            "sendByMe": true,
+            "time": "10:25 PM",
+            "msg": "Are you comming or not ?",
+            "status": "seen"
+          },
+          {
+            "sendByMe": false,
+            "time": "10:30 PM",
+            "msg": "Yes Am",
+            "status": ""
+          },
+        ],
+      ),
       ChatModel(
           name: "Alex",
           category: "",
@@ -42,7 +43,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "🔍",
           aboutUpdateDate: "May 26 2024",
           messages: [
-            {"sendByMe": true, "time": "8:56 PM", "msg": "Hello", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "8:56 PM",
+              "msg": "Hello",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "8:57 PM",
@@ -55,14 +61,24 @@ class ChatRepoImpl implements ChatRepo {
               "msg": "Am little busy right now",
               "status": ""
             },
-            {"sendByMe": true, "time": "9:05 PM", "msg": "Ok", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "9:05 PM",
+              "msg": "Ok",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "9:07 PM",
               "msg": "Is that any urgent issue  🚀",
               "status": ""
             },
-            {"sendByMe": true, "time": "9:10 PM", "msg": "No", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "9:10 PM",
+              "msg": "No",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "9:14 PM",
@@ -91,7 +107,12 @@ class ChatRepoImpl implements ChatRepo {
               "msg": "Hiiii",
               "status": ""
             },
-            {"sendByMe": true, "time": "7:16 PM", "msg": "hi", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:16 PM",
+              "msg": "hi",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "7:20 PM",
@@ -99,8 +120,18 @@ class ChatRepoImpl implements ChatRepo {
               "status": ""
             },
             {"sendByMe": false, "time": "7:22 PM", "msg": " 🙄 ", "status": ""},
-            {"sendByMe": true, "time": "7:25 PM", "msg": "Yes", "status": "seen"},
-            {"sendByMe": true, "time": "7:25 PM", "msg": "👍", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:25 PM",
+              "msg": "Yes",
+              "status": "seen"
+            },
+            {
+              "sendByMe": true,
+              "time": "7:25 PM",
+              "msg": "👍",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "7:28 PM",
@@ -119,7 +150,12 @@ class ChatRepoImpl implements ChatRepo {
               "msg": "Guess that",
               "status": ""
             },
-            {"sendByMe": true, "time": "7:32 PM", "msg": " 🤔 ", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:32 PM",
+              "msg": " 🤔 ",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "7:34 PM",
@@ -156,21 +192,36 @@ class ChatRepoImpl implements ChatRepo {
               "msg": "And you are also invited so dont forgot that   🎊",
               "status": ""
             },
-            {"sendByMe": true, "time": "7:38 PM", "msg": "no", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:38 PM",
+              "msg": "no",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "7:39 PM",
               "msg": "I will surely be there for that  💚 ",
               "status": "seen"
             },
-            {"sendByMe": true, "time": "7:40 PM", "msg": "💖", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:40 PM",
+              "msg": "💖",
+              "status": "seen"
+            },
             {
               "sendByMe": false,
               "time": "7:45 PM",
               "msg": "Then see you tomorrow",
               "status": ""
             },
-            {"sendByMe": true, "time": "7:38 PM", "msg": "🙌", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "7:38 PM",
+              "msg": "🙌",
+              "status": "seen"
+            },
             {"sendByMe": false, "time": "7:38 PM", "msg": "Ok", "status": ""},
             {"sendByMe": false, "time": "7:38 PM", "msg": "Bye", "status": ""},
           ]),
@@ -182,7 +233,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "😇",
           aboutUpdateDate: "May 26 2024",
           messages: [
-            {"sendByMe": true, "time": "6:11 PM", "msg": "Hello", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "6:11 PM",
+              "msg": "Hello",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "6:11 PM",
@@ -222,7 +278,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "✨💼",
           aboutUpdateDate: "Nov 26 2020",
           messages: [
-            {"sendByMe": true, "time": "5:35 PM", "msg": "Hello", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "5:35 PM",
+              "msg": "Hello",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "5:35 PM",
@@ -244,7 +305,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "😈",
           aboutUpdateDate: "Dec 26 2020",
           messages: [
-            {"sendByMe": true, "time": "3:35 PM", "msg": "Hi", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "3:35 PM",
+              "msg": "Hi",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "3:35 PM",
@@ -262,7 +328,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "✨💼",
           aboutUpdateDate: "Sep 26 2024",
           messages: [
-            {"sendByMe": true, "time": "2:35 PM", "msg": "Hello", "status": "delivered"},
+            {
+              "sendByMe": true,
+              "time": "2:35 PM",
+              "msg": "Hello",
+              "status": "delivered"
+            },
           ]),
       ChatModel(
           name: "Sam",
@@ -272,7 +343,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "✨💼",
           aboutUpdateDate: "Nov 26 2020",
           messages: [
-            {"sendByMe": true, "time": "2:25 PM", "msg": "Hello", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "2:25 PM",
+              "msg": "Hello",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "2:27 PM",
@@ -288,7 +364,12 @@ class ChatRepoImpl implements ChatRepo {
           about: "✨💼",
           aboutUpdateDate: "Nov 26 2020",
           messages: [
-            {"sendByMe": true, "time": "1:35 PM", "msg": "Hello", "status": "seen"},
+            {
+              "sendByMe": true,
+              "time": "1:35 PM",
+              "msg": "Hello",
+              "status": "seen"
+            },
             {
               "sendByMe": true,
               "time": "1:35 PM",
