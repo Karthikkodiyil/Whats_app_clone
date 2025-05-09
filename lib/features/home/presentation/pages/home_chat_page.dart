@@ -53,7 +53,6 @@ class HomeChatPage extends StatelessWidget {
           ],
         ),
       ),
-      //   bottomNavigationBar:const BottomNavBarWidget(),
     );
   }
 }

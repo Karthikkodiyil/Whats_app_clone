@@ -6,7 +6,6 @@ class HomeCallsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        //    bottomNavigationBar:const BottomNavBarWidget(),
       body: Center(
         child: Text("Calls"),
       ),

@@ -14,71 +14,69 @@ class HomeUpdatesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     AppStyle style = AppStyle();
 
-    return Scaffold(
-        body: SafeArea(child:
-            BlocBuilder<StatusBloc, StatusState>(builder: (context, state) {
-          final statusList = state.statusList;
-          return Stack(
+    return Scaffold(body: SafeArea(
+        child: BlocBuilder<StatusBloc, StatusState>(builder: (context, state) {
+      final statusList = state.statusList;
+      return Stack(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  10.kH,
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 15.0, bottom: 15),
-                    child: Text(
-                      "Status",
+              10.kH,
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15),
+                child: Text(
+                  "Status",
+                  style: style.blackBold20,
+                ),
+              ),
+              StatusScrollWidget(
+                statusList: statusList,
+              ),
+              30.kH,
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Chanels",
                       style: style.blackBold20,
                     ),
-                  ),
-                  StatusScrollWidget(
-                    statusList: statusList,
-                  ),
-                  30.kH,
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 15.0, bottom: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Chanels",
-                          style: style.blackBold20,
+                    Container(
+                      height: 30,
+                      width: 85,
+                      decoration: BoxDecoration(
+                          color: kGrey5,
+                          borderRadius: BorderRadius.circular(25)),
+                      child: Center(
+                        child: Text(
+                          "Explore",
+                          style: style.blackMedium16,
                         ),
-                        Container(
-                          height: 30,
-                          width: 85,
-                          decoration: BoxDecoration(
-                              color: kGrey5,
-                              borderRadius: BorderRadius.circular(25)),
-                          child: Center(
-                            child: Text(
-                              "Explore",
-                              style: style.blackMedium16,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Positioned(
-                bottom: 95,
-                right: 22,
-                child: Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      color: kGrey5, borderRadius: BorderRadius.circular(18)),
-                  child:const Padding(
-                      padding:  EdgeInsets.all(8.0),
-                      child: Icon(Icons.edit)),
+                      ),
+                    )
+                  ],
                 ),
-              )
+              ),
             ],
-          );
-        })));
+          ),
+          Positioned(
+            bottom: 95,
+            right: 22,
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  color: kGrey5, borderRadius: BorderRadius.circular(18)),
+              child: const Padding(
+                  padding: EdgeInsets.all(8.0), child: Icon(Icons.edit)),
+            ),
+          )
+        ],
+      );
+    })));
   }
 }

@@ -156,23 +156,22 @@ class HomePage extends StatelessWidget {
                             style: style.blacSemi27,
                           ),
                           actions: [
-                            const Icon(
-                              Icons.qr_code_scanner,
-                              size: 28,
-                            ),
-                            20.kW,
-                            const Icon(
-                              Icons.search,
-                              size: 30,
-                            ),
-                            15.kW,
-                            const Icon(
-                              Icons.more_vert,
-                              size: 28,
-                            ),
-                            10.kW,
-                          ],
-                        ));
+                              const Icon(
+                                Icons.qr_code_scanner,
+                                size: 28,
+                              ),
+                              20.kW,
+                              const Icon(
+                                Icons.search,
+                                size: 30,
+                              ),
+                              15.kW,
+                              const Icon(
+                                Icons.more_vert,
+                                size: 28,
+                              ),
+                              10.kW,
+                            ]));
     });
   }
 }

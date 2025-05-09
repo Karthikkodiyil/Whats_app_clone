@@ -4,7 +4,7 @@ abstract class ChatEvent {
 }
 
 class EventGetChat extends ChatEvent {
-  EventGetChat(int index):super(index: index);
+  EventGetChat(int index) : super(index: index);
 }
 
 class EventReadChat extends ChatEvent {

@@ -5,14 +5,15 @@ abstract class ChatState extends Equatable {
   final List<ChatEntity> chatList;
   final int index;
 
-  const ChatState({required this.chatList,this.index = 0});
+  const ChatState({required this.chatList, this.index = 0});
 
   @override
-  List<Object?> get props => [chatList,index];
+  List<Object?> get props => [chatList, index];
 }
 
 class LoadChat extends ChatState {
-  const LoadChat(List<ChatEntity>chatList,int index) : super(chatList: chatList,index: index);
+  const LoadChat(List<ChatEntity> chatList, int index)
+      : super(chatList: chatList, index: index);
 }
 
 class MsgRead extends ChatState {
